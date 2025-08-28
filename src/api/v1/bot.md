@@ -115,7 +115,7 @@ POST /v1/bot/bot-detail
       "private": 0, // 是否私有（0为否，1为私人）
       "isStop": 0, // 是否停用（0为启用，1为停用）
       "settingJson": "",  // 设置json
-      "del_flag": 0, 
+      "del_flag": 0, 是否删除
       "alwaysAgree": 1, // 是否总是同意添加群聊
       "banId": 0, // 顾名思义
       "uri": "https://chat-go.jwzhd.com/open-apis/v1/bot/send?token=" // 机器人发送消息url（？
@@ -140,7 +140,7 @@ POST /v1/bot/bot-detail
         "banId": 0, // ban人的id
         "gag": 0,
         "gagBy": "",
-        "msgTypeLimit": ""
+        "msgTypeLimit": "" // 消息类型限制
       },
     // ...
   ],
@@ -175,19 +175,19 @@ POST /v1/bot/bot-group-list
           "avatarId": 0, // 机器人头像ID
           "avatarUrl": "https://...", // 机器人头像ID
           "token": "123123123123123123123", // 机器人token
-          "link": "", // 未知
+          "link": "", // 机器人分享链接（？）
           "type": 0, // 未知
           "introduction": "测试机器人简介", // 机器人简介
-          "createBy": "", // 未知
-          "createTime": 0, // 未知
-          "headcount": 0, // 未知
-          "private": 0, // 未知
-          "isStop": 0, // 未知
+          "createBy": "", // 创建者
+          "createTime": 0, // 创建时间（时间戳）
+          "headcount": 0, // 使用人数
+          "private": 0, // 是否私密
+          "isStop": 0, // 是否停用
           "settingJson": "", // 机器人设置json，需转义
-          "del_flag": 0, // 未知
-          "alwaysAgree": 0, // 未知
-          "groupLimit": 0, // 未知
-          "banId": 0, // 未知
+          "del_flag": 0, // 是否删除（逻辑删除特有）
+          "alwaysAgree": 0, // 自动进群（？）
+          "groupLimit": 0, // 是否开启进群限制
+          "banId": 0, // 在被封禁机器人中的排序（？）
           "linkStop": 0, // 未知
           "uri": "https://chat-go.jwzhd.com/open-apis/v1/bot/send?token=" // 机器人示例API接口
         },
