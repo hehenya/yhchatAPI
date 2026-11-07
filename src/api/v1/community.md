@@ -1605,3 +1605,54 @@ POST /v1/community/report
   "msg": "success"
 }
 ```
+## 转发帖子到会话
+
+**该API支持转发目标帖子到多个会话**
+
+POST /v1/community/posts/post-forward
+
+请求头:
+
+| 名称  | 必须 | 备注 |
+| ----- | ---- | ---- |
+| token | 是   | 无   |
+
+请求体（单个会话）：
+
+```JSON
+{
+  "postId": 34223, // 待转发的帖子ID
+  "receive": [
+    {
+      "chatId": "0", // 目标会话ID
+      "chatType": 11415 // 目标会话类别: 1-用户，2-群聊，3-机器人
+    }
+  ]
+}
+```
+请求体（多个会话）：
+
+```JSON
+{
+  "postId": 000,
+  "receive": [
+    {
+      "chatId": "114514",
+      "chatType": 2
+    },
+    {
+      "chatId": "1919810",
+      "chatType": 2
+    }
+  ]
+}
+```
+
+响应体：
+
+```JSON
+{
+  "code": 1,
+  "msg": "success"
+}
+```
